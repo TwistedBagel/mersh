@@ -23,6 +23,146 @@ FONTS
 }
 
 /**********************
+Flexnav Styles
+**********************/
+
+.mobile {
+    display: none;
+}
+
+nav {
+    font-size: 120%;
+    background-color: #495c80;
+}
+
+nav ul, li {
+    margin:0;
+    padding:0;
+}
+
+nav ul.flex {
+        padding:0;
+        margin:0;
+        display:flex;
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+        align-items:stretch;
+        align-content:space-between;
+}
+
+nav ul li {
+        display:block;
+        width: 100%;
+        text-align:center;
+        position:relative;
+}
+
+nav a {
+        display:block;
+        padding:50px 0px;
+        color:#fff;
+        text-decoration: none;
+        text-transform: uppercase;
+}
+
+nav li:hover { background-color:rgba(71,101,128,0.3); }
+
+.desktop ul li > ul {
+    position: absolute;
+    background-color: rgba(71,101,128,.8);
+    visibility: hidden;
+    opacity: 0;
+    width:100%;
+    left: 0;
+    transition: all 0.3s ease;
+    transform: translateY(-0.1em);
+}
+
+.desktop ul li ul li > ul {
+    position: absolute;
+    background-color: rgba(71,101,128,.8);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-0.1em);
+    transition: all 0.3s ease;
+}
+
+.desktop ul li:hover > ul {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0.1em);
+}
+
+.desktop ul li ul li:hover > ul {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0.1em);
+    left: 100%;
+    top: 0;
+}
+
+nav ul li ul li {
+        display:block;
+
+}
+
+nav ul li ul li a { padding:5px; }
+
+.menuClass {
+    height: auto !important;
+    overflow: visible !important;
+    visibility: visible !important;
+}
+
+.subMenuClass {
+    display: block;
+    /* background-color: rgba(71,101,128,1);  */
+    background-color: green;
+}
+
+.mobile a {
+    padding: 0.8em 0;
+}
+
+.mobile div span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #cdcdcd;
+    border-radius: 3px;
+}
+
+.mobile ul.flex {
+    flex-wrap: wrap;
+    height: 2em;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.mobile div {
+    height: 20%;
+    margin-right: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.mobile ul li > ul {
+    /* position: absolute; */
+    background-color: #5b7ea1;
+    display: none;
+    width:100%;
+    /* left: 0; */
+}
+
+.mobile ul li ul li > ul {
+    /* position: absolute; */
+    background-color: #9bb1c6;
+    display: none;
+}
+
+/**********************
 Index Styles
 **********************/
 
@@ -47,7 +187,7 @@ body {
     font-size: 5rem;
 }
 
-nav {
+/* nav {
     font-size: 120%;
     background-color: #495c80;
 }
@@ -65,11 +205,11 @@ nav ul li {
 }
 
 nav ul li a {
-    /* text-align: center; */
+    text-align: center;
     text-decoration: none;
     padding: .8em;
     color: #dee9ff;
-}
+} */
 
 nav ul li a:hover {
     background-color: #7493cc;
@@ -313,6 +453,11 @@ Media Queries
         max-width: 50%;
     }
 
+    section {
+        margin-left: 0.2em;
+        margin-right: 0.2em;
+    }
+
 }
 
 @media screen and (max-width: 700px) {
@@ -329,6 +474,21 @@ Media Queries
         max-width: 30%;
     }
 
+    .column2 {
+        width: 100%;
+    }
+
+    .profile {
+        display: none;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+    }
 }
 
 @media screen and (max-width: 500px) {
