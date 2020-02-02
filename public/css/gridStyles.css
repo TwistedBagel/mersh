@@ -1,0 +1,66 @@
+section {
+    margin: unset;
+}
+
+.main {
+    margin: unset;
+
+    display: grid;
+    grid-template-areas: 
+        'header header header'
+        'nav nav nav'
+        'profile bio bio'
+        'footer footer footer';
+    grid-template-columns: repeat(3, 33%);
+    grid-gap: 0.5em;
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+aside {
+    grid-area: profile;
+    padding-left: 5em;
+}
+
+aside img {
+    max-width: 100%;
+}
+
+.profile {
+    /* Unset values from original CSS */
+    float: unset;
+    width: unset;
+    height: unset;
+    margin: unset;
+
+}
+
+.bio {
+    grid-area: bio;
+}
+
+footer {
+    grid-area: footer;
+}
+
+@media screen and (max-width: 700px) {
+
+    .main {
+        grid-template-areas:
+            'header'
+            'nav'
+            'bio'
+            'footer';
+        grid-template-columns: 1fr;
+    }
+
+    .bio {
+        padding: 1.5em;
+    }
+}
