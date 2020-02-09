@@ -1,0 +1,104 @@
+body {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-areas:
+        '. logo logo nav nav nav nav .'
+        'hero hero hero hero hero hero hero hero'
+        'hero hero hero hero hero hero hero hero'
+        '. call1 call1 call2 call2 call3 call3 .'
+        '. gallery gallery gallery gallery gallery gallery .'
+        'footer footer footer footer footer footer footer footer'
+
+}
+
+div {
+    background-color: #c3c3c3;
+    /* padding: 1em; */
+}
+
+#logo {
+    grid-area: logo;
+}
+
+#nav {
+    grid-area: nav;
+}
+
+#hero {
+    grid-area: hero;
+}
+
+#call1 {
+    grid-area: call1;
+}
+
+#call2 {
+    grid-area: call2;
+}
+
+#call3 {
+    grid-area: call3;
+}
+
+.gallery {
+    grid-area: gallery;
+    display: grid;
+    grid-gap: 10px;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fit, 4em);
+    grid-template-rows: repeat(auto-fit, 4em);
+}
+
+.gallery > div {
+    padding: 1em;
+}
+
+.gItemSquare {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.gItemTallest {
+    grid-row: span 3;
+    /* grid-column: 1; */
+}
+
+.gItemTall {
+    grid-row: span 2;
+    /* grid-column: 1; */
+}
+
+#footer {
+    grid-area: footer;
+}
+
+@media screen and (max-width: 960px) {
+
+    body {
+        grid-template-areas:
+            'logo logo logo nav nav nav nav nav'
+            'hero hero hero hero hero hero hero hero'
+            'hero hero hero hero hero hero hero hero'
+            'call1 call1 call1 call2 call2 call3 call3 call3'
+            'gallery gallery gallery gallery gallery gallery gallery gallery'
+            'footer footer footer footer footer footer footer footer';
+    }
+
+}
+
+@media screen and (max-width: 660px) {
+
+    body {
+        grid-template-areas:
+            'nav nav nav nav nav nav nav nav'
+            'logo logo logo logo logo logo logo logo'
+            'call1 call1 call1 call1 call1 call1 call1 call1'
+            'call2 call2 call2 call2 call2 call2 call2 call2'
+            'call3 call3 call3 call3 call3 call3 call3 call3'
+            'gallery gallery gallery gallery gallery gallery gallery gallery'
+            'footer footer footer footer footer footer footer footer';
+    }
+    
+}

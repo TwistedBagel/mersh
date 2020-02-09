@@ -21,6 +21,10 @@ app.get('/grids', function(req, res) {
   res.render('pages/grids/index');
 });
 
+app.get('/squares', function(req, res) {
+  res.render('pages/squaresIndex');
+})
+
 let port = process.env.PORT;
 if (port == null || port == "") {
   port = 8080;
