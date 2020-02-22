@@ -25,6 +25,10 @@ app.get('/squares', function(req, res) {
   res.render('pages/squaresIndex');
 })
 
+app.get('/midterm', function(req, res) {
+  res.render('pages/midterm/index');
+});
+
 let port = process.env.PORT;
 if (port == null || port == "") {
   port = 8080;

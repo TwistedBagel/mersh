@@ -1,0 +1,271 @@
+/****************
+VARIABLES
+****************/
+
+:root {
+    --alphaBlack: rgba(0, 0, 0, 0.45);
+    --blue: #4bcaff;
+    --grey: #515f67;
+}
+
+/****************
+FONTS
+****************/
+
+@font-face {
+    font-family: SegoeUI;
+    src: url('/fonts/SEGOEUI.TTF');
+}
+
+@font-face {
+    font-family: SegoeUIBold;
+    src: url('/fonts/SEGOEUIB.TTF');
+}
+
+@font-face {
+    font-family: SegoeUIL;
+    src: url('/fonts/segoeuil.ttf');
+}
+
+/****************
+STYLES
+****************/
+
+.wrap {
+    grid-column: 2 / 4;
+    /* max-width: 1170px; */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 585px 585px 1fr;
+    grid-template-areas:
+        'hero hero hero hero'
+        'services services services services'
+        '. portfolio portfolio .'
+        'video video video video'
+        'footer footer footer footer';
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+    background-color: var(--alphaBlack);
+    position: absolute;
+    width: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+nav ul li {
+    padding: 0.5em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-family: SegoeUIBold;
+    text-transform: uppercase;
+}
+
+nav ul li:first-of-type {
+    border: 3px solid var(--blue);
+}
+
+nav ul li:first-of-type a {
+    color: var(--blue);
+    padding: 0.5em;
+}
+
+nav > * {
+    grid-column: 2/2;
+    grid-row: 1;
+}
+
+.logo {
+    font-family: SegoeUIBold;
+    align-self: center;
+    font-size: 1.8rem;
+}
+
+.logo > span:first-of-type {
+    color: var(--blue);
+}
+
+.logo > span:last-of-type {
+    color: #ffffff;
+}
+
+nav img {
+    align-self: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+.hero1 {
+    background-image: url('/img/heroImage1.jpg');
+    grid-area: hero;
+    height: 70vh;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    color: white;
+}
+
+.hero1 > p {
+    background-color: var(--alphaBlack);
+    padding: 0.2em;
+    font-size: 2.65rem;
+    font-family: SegoeUIL;
+    text-transform: uppercase;
+}
+
+.services {
+    grid-area: services;
+    color: white;
+    background-color: var(--blue);
+    padding: 2em;
+    font-family: SegoeUIL;
+}
+
+.services h3 {
+    text-transform: uppercase;
+}
+
+.services h1 {
+    grid-row: 1;
+    grid-column: 2;
+    text-transform: uppercase;
+}
+
+.services span {
+    text-decoration: underline;
+}
+
+.services section {
+    display: flex;
+}
+
+.services section div {
+    padding: 0.25em;
+}
+
+.portfolio {
+    grid-area: portfolio;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 4em 0;
+}
+
+.nav > h1 {
+    font-family: SegoeUIL;
+    text-transform: uppercase;
+    color: var(--grey);
+}
+
+.nav > h1 > span:first-of-type {
+    text-decoration: underline;
+}
+
+.nav ul {
+    align-self: center;
+}
+
+.nav ul li {
+    padding: 0.5em 1.5em;
+    display: inline;
+}
+
+.nav ul li a {
+    color: var(--grey);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-family: SegoeUIBold;
+    text-transform: uppercase;
+}
+
+.nav ul li:first-of-type {
+    border: 3px solid var(--blue);
+}
+
+.nav ul li:first-of-type a {
+    color: var(--blue);
+    padding: 0.5em;
+}
+
+.gallery {
+    display: grid;
+    gap: 30px;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+}
+
+.galleryItem {
+    position: relative;
+}
+
+.galleryItem > div {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    justify-content: center;
+}
+
+.galleryItem:hover > div {
+    display: flex;
+    cursor: pointer;
+}
+
+.galleryItem div span {
+    align-self: center;
+    font-size: 3rem;
+}
+
+.videoHero {
+    grid-area: video;
+    background-color: rgb(84, 95, 102);
+    color: white;
+}
+
+.videoHero h1 {
+    font-family: SegoeUIL;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.videoHero h1 span {
+    text-decoration: underline;
+}
+
+.descText {
+    font-family: SegoeUI;
+    grid-column: 2 / 3;
+}
+
+.descText a {
+    font-family: SegoeUIBold;
+    text-decoration: none;
+}
+
+.videoHero img {
+    grid-column: 3 / 4;
+}
