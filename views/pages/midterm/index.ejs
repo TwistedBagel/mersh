@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
     <link rel='stylesheet' href='/css/normalize.css'>
     <link rel="stylesheet" href="/css/midterm.css">
+    <script src="https://kit.fontawesome.com/9d72bb5bed.js" crossorigin="anonymous"></script>
     <title>Midterm</title>
 </head>
 <body>
-    <div class='grid-container'>
-        <nav>
+    <!-- <div class='grid-container'> -->
+        <div class='navWrap'>
+            <nav class='desktop'>
                 <div class='logo'>
                     <span>MY</span><span>PORTFOLIO</span>
                 </div>
@@ -20,13 +23,31 @@
                     <li><a href='#'>Portfolio</a></li>
                     <li><a href='#'>Contact</a></li>
                 </ul>
-        </nav> 
+            </nav>
+            <nav class='mobile'>
+                <div class='logo'>
+                    <span>MY</span><span>PORTFOLIO</span>
+                </div>
+                <ul>
+                    <li><a class='active-nav' href='#'>Home</a></li>
+                    <li><a href='#'>Services</a></li>
+                    <li><a href='#'>Features</a></li>
+                    <li><a href='#'>Portfolio</a></li>
+                    <li><a href='#'>Contact</a></li>
+                </ul>
+                <div id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div> 
+            </nav>
+        </div>
         <div class="hero1">
             <p>“Lorem ipsum dolor sit amet, con 
                 adipiscing eliAt. Curabitur nec lacus La purus”</p>
         </div>
-        <div class="services">
-            <div class='wrap'>
+        <div class="servicesWrap">
+            <div class='services'>
                 <h1><span>Ser</span>vices</h1>
                 <section>
                     <div>
@@ -102,10 +123,79 @@
                 <p>Bear claw marzipan bear claw applicake I love muffin. Lemon drops gummi bears pastry gummi bears sesame snaps I love unerdwear.com. Soufflé cotton candy dessert candy ice cream wafer gummies cheesecake brownie.</p>
 
                 <p>Muffin chupa chups jelly beans sweet pie applicake. Croissant chocolate cake I love pudding. Ice cream I love powder pudding apple pie marshmallow. Cupcake marzipan oat cake bonbon I love candy canes toffee.</p>
-                <a href="#">Visit Me</a>
+                <div><a href="#">Visit Me</a></div>
             </div>
-            <img src='/img/video.png'>
+            <img src='/img/video.png' alt='santa monica beach'>
         </div>
-    </div>
+        <div class='twitterWrap'>
+            <div class="twitter">
+                <h1><span>twi</span>tter</h1>
+                <!-- fontawesome twitter logo -->
+                <p>Unerdwear cookie liquorice. Cake donut cupcake lollipop soufflé candy. Chocolate oat cake <span class='bold'>@cheesecake</span> tootsie roll.</p>
+                <i class="fab fa-2x fa-twitter"></i>
+            </div>
+        </div>
+        <div class="aboutWrap">
+            <div class="about">
+                <h1><span>Wh</span>o am I?</h1>
+                <p>Bear claw marzipan bear claw applicake I love muffin. Lemon drops gummi bears pastry gummi bears sesame snaps I love unerdwear.com. Soufflé cotton candy dessert candy ice cream wafer gummies cheesecake brownie.
+                </p>
+                <p>Muffin chupa chups jelly beans sweet pie applicake. Croissant chocolate cake I love pudding. Ice cream I love powder pudding apple pie marshmallow. Cupcake marzipan oat cake bonbon I love candy canes toffee.</p>
+                <p>Pudding dessert jujubes tiramisu gingerbread croissant tiramisu applicake. Sesame snaps sugar plum cotton candy chocolate bonbon lemon drops candy canes cotton candy. Cake toffee pie bear claw pastry.</p>
+                <div class='social'>
+                    <i class='fab fa-2x fa-twitter'></i>
+                    <i class='fab fa-2x fa-google-plus-g'></i>
+                    <i class='fas fa-2x fa-coffee'></i>
+                </div>
+            </div>
+        </div>
+        <div class='testimonialWrap'>
+            <div class='testimonial'>
+                <h1><span>tes</span>timonials</h1>
+                <p>"</p>
+                <p>Applicake chocolate cake wafer toffee pie soufflé wafer. Tart marshmallow wafer macaroon cheesecake jelly. Gingerbread cookie soufflé sweet roll sweet roll jelly-o.</p>
+                <p>-Brooks the Bison</p>
+            </div>
+        </div>
+        <div class='contactWrap'>
+            <form class='contact' method='POST' action='/mail'>
+                <h1><span>co</span>ntact</h1>
+                <div class='name'>
+                    <label>Full Name</label>
+                    <input type='text' name='fName'>
+                </div>
+                <div class='email'>
+                    <label>Email</label>
+                    <input type='text' name='email'>
+                </div>
+                <div class='msg'>
+                    <label>Message</label>
+                    <textarea name='message'></textarea>
+                </div>
+                <p>Jujubes bear claw croissant wafer sweet lemon drops brownie chocolate bar. Sweet lollipop halvah tootsie roll cake fruitcake. Chocolate cake chocolate bar gingerbread lollipop tart. Jujubes bear claw donut chupa chups.</p>
+                <p>Dixie State University<br>
+                    225 South 700 East<br>
+                    St. George, UT(Utah) 84770<br>
+                    (435) 652-7500</p>
+                <input type='submit' value='MESSAGE'>
+            </form>
+        </div>
+        <div class='footerWrap'>
+            <footer>
+                <ul>
+                    <li><a href='#'>Home</a></li>
+                    <li><a href='#'>Services</a></li>
+                    <li><a href='#'>Portfolio</a></li>
+                    <li><a href='#'>contact</a></li>
+                </ul>
+                <p>2018 &copy;</p>
+            </footer>
+        </div>
+    <!-- </div> -->
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <script src='/js/midterm.js'></script>
 </body>
 </html>
